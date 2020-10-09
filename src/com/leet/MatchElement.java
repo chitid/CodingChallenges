@@ -13,6 +13,15 @@ public class MatchElement {
         boolean o=s.stream().anyMatch(k->k.endsWith("j"));
         System.out.println("Array has words that endswith 'd'"+o);
 
+        boolean j=s.stream().noneMatch(k->k.endsWith("j"));
+        System.out.println("Array has words that endswith 'e'"+j);
+
+        boolean m=s.stream().allMatch(k->k.length()>2);
+        System.out.println("Array has words that endswith 'e'"+m);
+
+
+
+
     }
 
 }
