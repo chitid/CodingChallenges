@@ -1,7 +1,10 @@
 package com.leet;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /*
 
@@ -19,7 +22,17 @@ public class MapArrayProgram {
         ghk.entrySet().stream()
                 .filter(en->en.getValue().equals("two"))
                 .forEach(e->System.out.println("key value is "+e.getKey()+" value of the entry"+e.getValue()));
-        
+
+        List<FruitBasket> fruitBasketList = Arrays.asList(new FruitBasket("Gac", 2000),
+                new FruitBasket("Hemi", 1600), new FruitBasket("Gac", 3000),
+                new FruitBasket("Apollo", 2000), new FruitBasket("Horned", 1700));
+
+        fruitBasketList.stream()
+                .map(FruitBasket::getType)
+                .collect(Collectors.toSet())
+                .forEach(System.out::println);
+
+
     }
 
 
