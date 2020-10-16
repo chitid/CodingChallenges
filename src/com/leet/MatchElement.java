@@ -18,10 +18,6 @@ public class MatchElement {
 
         boolean m=s.stream().allMatch(k->k.length()>2);
         System.out.println("Array has words that endswith 'e'"+m);
-
-
-
-
     }
 
 }
